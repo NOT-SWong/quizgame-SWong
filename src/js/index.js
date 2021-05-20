@@ -49,7 +49,7 @@ function guess(id, guess) {
 function showProgress() {
     let currentQuestionNumber = quiz.questionIndex + 1;
     let element = document.getElementById("progress");
-    element.innerHTML = "Question" + currentQuestionNumber + " of " + quiz.questions.length;
+    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 };
 
 function showScores() {
