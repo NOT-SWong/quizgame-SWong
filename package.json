@@ -1,0 +1,25 @@
+{
+  "name": "parcel-template-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build-prod": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOT-SWong/parcel-template-video.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NOT-SWong/parcel-template-video/issues"
+  },
+  "homepage": "https://github.com/NOT-SWong/parcel-template-video#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.13"
+  }
+}
