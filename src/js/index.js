@@ -28,6 +28,9 @@ function final() {
         let element = document.getElementById("question");
         element.innerHTML = quiz.getQuestionIndex().text;
 
+        let pics = document.getElementById("pics");
+        pics.innerHTML = quiz.getQuestionIndex().pics;
+
         let choices = quiz.getQuestionIndex().choices;
         choices.forEach((choices,x) =>{
             let element = document.getElementById("choice" + x);

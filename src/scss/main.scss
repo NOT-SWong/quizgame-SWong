@@ -1,3 +1,21 @@
 body {
-    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.line1{
+    margin-bottom: 20px
+}
+
+.line2 {
+    margin-top: 50px
+}
+
+#theImage {
+    max-width: 25%;
 }
