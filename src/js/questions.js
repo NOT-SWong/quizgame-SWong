@@ -1,6 +1,5 @@
-function Question(text, pics, choices, answer) {
+function Question(text, choices, answer) {
     this.text = text;
-    this.pics = pics;
     this.choices = choices;
     this.answer = answer;
 }
@@ -10,60 +9,17 @@ Question.prototype.isCorrectAnswer = function(choice) {
 };
 
 const questions = [
-    new Question("Which of the following is the correct anime and character from the photo?", 
-                "img/Neopolitan.jpg", 
-                ["RWBY - Neopolitan", "JNPR - Cinder", "CFVY - Emerald", "CRDL - Mercury"], 
-                "RWBY - Neopolitan"),
-
-    new Question("Which of the following is the correct anime and character from the photo? (*professional speller right here)", 
-                "img/AsuiTsuyu.jpg",
-                ["My Hero Academia - Izuku Midiori", "My Hero Academie - Emi Fukukado", "Boku Nu Hero Academie - Ibara Shiozaki", "Boku No Hero Academia - Asui Tsuyu"], 
-                "Boku No Hero Academia - Asui Tsuyu"),
-
-    new Question("Which of the following is the correct anime and character from the photo?",
-                "img/SaotomeMary.png",
-                ["The Irregular at Magic High School - Sayaka Igarashi", "AngelBeats! - Runa Yomozuki", "Classroom of the Elite - Ririka Momobami", "Kakegurui - Mary Saotome"], 
-                "Kakegurui - Mary Saotome"),
-
-    new Question("Which of the following is the correct anime and who is the character on the left?", 
-                "img/IzumoKamiki.jpg",
-                ["Blue Exorcist - Izumo Kamiki", "Black Clover - Mimosa Vermillion", "Noragami - Hiyori Iki", "MobPyscho100 - Shigeo Kageyama"], 
-                "Blue Exorcist - Izumo Kamiki"),
-
-    new Question("Which of the following is the correct anime and who is the character with ketchup (*defintely ketchup) on their face?", 
-                "img/MayukoNise.jpg",
-                ["Darwin's Game - Mamoru Aikawa", "Btooom! - Yuri Honjo", "High-Rise Invasion - Mayuko Nise", "Future Diary - Tenkuu Shinpan"], 
-                "High-Rise Invasion - Mayuko Nise"),
-
-    new Question("Which of the following is the correct anime and character from the photo? (UwU)", 
-                "img/Phil.jpg",
-                ["Owari No Seraph - Shusaku Iwasaki", "The Promised Neverland - Phil", "Higurashi: When They Cry - Furude Rika", "Made in Abyss - Kiyui"], 
-                "The Promised Neverland - Phil"),
-
-    new Question("Which of the following is the correct anime and character from the photo? (sleep paralysis demon)", 
-                "img/JuuzouSuzuya.jpg",
-                ["Akame ga Kill! - Leone", "Tokyo Ghoul - Juuzou Suzuya", "Death Parade - Chisato Miyazaki", "Another - Yukari Sakuragi"], 
-                "Tokyo Ghoul - Juuzou Suzuya"),
-
-    new Question("Which of the following is the correct anime and character from the photo?", 
-                "img/Kakushi.jpg",
-                ["Demon Slayer - Ruka Rengoku", "Damon Sleyer - Enmu", "Kimitsu No Yeiba - Inosuke Hasibira", "Kimestu No Yaiba - Kakushi"], 
-                "Kimestu No Yaiba - Kakushi"),
-
-    new Question("Which of the following is the correct anime and character from the photo?", 
-                "img/ChizuruSasaki.png",
-                ["Free! - Gou Matsuoka", "Yuri!!! on Ice - Kenjiro Minami", "Haikyuu! - Chizuru Sasaki", "Hanebado! - Erena Fujisawa"], 
-                "Haikyuu! - Chizuru Sasaki"),
-
-    new Question("Which of the following is the correct anime and character from the photo? (bootiful hoomans)", 
-                "img/WatanabeTsuki.jpg",
-                ["Love Live! - Kosaka - Yukiho", "Love Live! Sunshine!! - Watanabe Tsuki", "Love Live! School Idol Project - Ayase Arisa", "Love Live! Nijigasaki High School Idol Club - Mifune Shioriko"], 
-                "Love Live! Sunshine!! - Watanabe Tsuki"),
-
-    new Question("Which of the following is the correct anime and character from the photo?", 
-                "img/MukuroIkusaba.jpg",
-                ["Yurikuma Arashi - Lulu Yurigasaki", "Guilty Crown - Mana Ouma", "Danganronpa - Mukuro Ikusaba", "K - Rikio Kamamoto"], 
-                "Danganronpa - Mukuro Ikusaba")
+    new Question("<img class='pics' src='https://cdn.awwni.me/140q8.png'><br>Which of the following is the correct anime and character from the photo?", ["RWBY - Neopolitan", "JNPR - Cinder", "CFVY - Emerald", "CRDL - Mercury"], "RWBY - Neopolitan"),
+    new Question("<img class='pics' src='https://wallpapercave.com/wp/wp3137882.jpg'><br>Which of the following is the correct anime and character from the photo? (*professional speller right here)", ["My Hero Academia - Izuku Midiori", "My Hero Academie - Emi Fukukado", "Boku Nu Hero Academie - Ibara Shiozaki", "Boku No Hero Academia - Asui Tsuyu"], "Boku No Hero Academia - Asui Tsuyu"),
+    new Question("<img class='pics' src='https://i.pinimg.com/originals/01/3c/96/013c96213780004ba514775955fc27e2.jpg'><br>Which of the following is the correct anime and character from the photo?", ["The Irregular at Magic High School - Sayaka Igarashi", "AngelBeats! - Runa Yomozuki", "Classroom of the Elite - Ririka Momobami", "Kakegurui - Mary Saotome"], "Kakegurui - Mary Saotome"),
+    new Question("<img class='pics' src='https://i.pinimg.com/originals/73/2a/d1/732ad1ddc074237f9b8732fc9f298a5b.jpg'><br>Which of the following is the correct anime and character from the photo?", ["Blue Exorcist - Izumo Kamiki", "Black Clover - Mimosa Vermillion", "Noragami - Hiyori Iki", "MobPyscho100 - Shigeo Kageyama"], "Blue Exorcist - Izumo Kamiki"),
+    new Question("<img class='pics' src='https://i.pinimg.com/474x/cf/fa/4d/cffa4d3ce84bfe2d1bfbbe23d1b45e26.jpg'><br>Which of the following is the correct anime and who is the character with ketchup (*defintely ketchup) on their face?", ["Darwin's Game - Mamoru Aikawa", "Btooom! - Yuri Honjo", "High-Rise Invasion - Mayuko Nise", "Future Diary - Tenkuu Shinpan"], "High-Rise Invasion - Mayuko Nise"),
+    new Question("<img class='pics' src='https://wallpapercave.com/wp/wp8921346.jpg'><br>Which of the following is the correct anime and character from the photo? (UwU)", ["Owari No Seraph - Shusaku Iwasaki", "The Promised Neverland - Phil", "Higurashi: When They Cry - Furude Rika", "Made in Abyss - Kiyui"], "The Promised Neverland - Phil"),
+    new Question("<img class='pics' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0c093ab4-62a8-42b4-b93e-647f5bfbe84c/d8fgtws-72fa927f-c06e-4403-b60b-de3539a70007.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBjMDkzYWI0LTYyYTgtNDJiNC1iOTNlLTY0N2Y1YmZiZTg0Y1wvZDhmZ3R3cy03MmZhOTI3Zi1jMDZlLTQ0MDMtYjYwYi1kZTM1MzlhNzAwMDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9TAGPx38qQvGVz7tHbzuip5G7MeumW49oBPIZCDvsek'><br>Which of the following is the correct anime and character from the photo? (sleep paralysis demon)", ["Akame ga Kill! - Leone", "Tokyo Ghoul - Juuzou Suzuya", "Death Parade - Chisato Miyazaki", "Another - Yukari Sakuragi"], "Tokyo Ghoul - Juuzou Suzuya"),
+    new Question("<img class='pics' src='https://pbs.twimg.com/media/EEH3-IbUwAE6MU-.jpg:large'><br>Which of the following is the correct anime and type of character from the photo?", ["Demon Slayer - Ruka Rengoku", "Daemeon Sleyer - Enmu", "Kimitsu No Yeiba - Inosuke Hasibira", "Kimestu No Yaiba - Kakushi"], "Kimestu No Yaiba - Kakushi"),
+    new Question("<img class='pics' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4af140f6-6001-4db2-a8fb-ed9e6277169f/dah6kkf-c371008e-ca72-4143-9198-808778b2f209.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRhZjE0MGY2LTYwMDEtNGRiMi1hOGZiLWVkOWU2Mjc3MTY5ZlwvZGFoNmtrZi1jMzcxMDA4ZS1jYTcyLTQxNDMtOTE5OC04MDg3NzhiMmYyMDkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.fQOy4sgLDb7sHbkS55YbsnJEcVNAk7qDwUFndvUeLpg'><br>Which of the following is the correct anime and character from the photo?", ["Free! - Gou Matsuoka", "Yuri!!! on Ice - Kenjiro Minami", "Haikyuu! - Haiba Alisa", "Hanebado! - Erena Fujisawa"], "Haikyuu! - Haiba Alisa"),
+    new Question("<img class='pics' src='https://cdn.donmai.us/sample/b4/a6/sample-b4a605322a8eaa81318b205637a1cf08.jpg'><br>Which of the following is the correct anime and name for the one on the right? (bootiful hoomans)", ["Love Live! - Kosaka - Yukiho", "Love Live! Sunshine!! - Wantanabe Tsuki", "Love Live! School Idol Project - Ayase Arisa", "Love Live! Nijigasaki High School Idol Club - Mifune Shioriko"], "Love Live! Sunshine!! - Wantanabe Tsuki"),
+    new Question("<img class='pics' src='https://i.pinimg.com/originals/53/c8/9e/53c89ec8e76d6e8025d48c4da7d53e1e.jpg'><br>Which of the following is the correct anime and character from the photo?", ["Yurikuma Arashi - Lulu Yurigasaki", "Guilty Crown - Mana Ouma", "Danganronpa - Mukuro Ikusaba", "K - Rikio Kamamoto"], "Danganronpa - Mukuro Ikusaba")
 ];
 
 export {questions};

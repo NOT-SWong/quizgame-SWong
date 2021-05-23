@@ -6,6 +6,12 @@ body {
 .container {
     display: flex;
     justify-content: center;
+    height: 85%;
+}
+
+.quizname {
+    display:flex;
+    justify-content: center;
 }
 
 .line1{
@@ -16,6 +22,37 @@ body {
     margin-top: 50px
 }
 
-#theImage {
-    max-width: 25%;
+#question {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.pics {
+    width:25%;
+    display: flex;
+    padding: 1rem;
+}
+
+.sizing {
+    width: 120rem;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.btn0 .btn1 .btn2 .btn3 {
+    transition-duration:0.4s;
+    background-color:white;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    background-color:powderblue;
+    color:white;
+}
+
+#progress {
+    display: flex;
+    justify-content: space-around;
 }
